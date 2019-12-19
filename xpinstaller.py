@@ -5,6 +5,7 @@ from datetime import datetime
 from time import time as timer
 from multiprocessing.pool import ThreadPool
 from shutil import rmtree
+from config import *
 
 try:
     import httplib
@@ -44,7 +45,9 @@ urls = [
 
 print(dt_string, 'Starting XchangePoint Installer')
 print(dt_string, 'Checking network connection:', internet_on())
-print(dt_string, 'Downloading files')
+print(dt_string, 'Downloading: ', xp_url)
+print(dt_string, 'Downloading: ', rego_url)
+print(dt_string, 'Downloading: ', net_url)
 
 # Create temp folder and download files into it
 if not os.path.exists("./temp"):
